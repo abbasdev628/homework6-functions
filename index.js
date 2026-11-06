@@ -18,7 +18,7 @@ console.log(salam());
 // 2. Verilmiş ədədin cüt yoxsa tək olduğunu Boolean 
 // tipində (true və ya false) return edən funksiya qurun
 
-function eded(m,n) {
+function eded(m){
     if(m%2===0){
         return true;
     }
@@ -60,5 +60,20 @@ console.log(number(5));
 //     1. Farenheyt temperaturu Selsiyə çevirmə qaydası: C° = (F° - 32) / 1.8
 //     2. Suyun qaynama temperaturu: 100 C°
 
+function faranheyt(fdegree) {
+    let celci = (fdegree-32)/1.8
+    return celci
+};
+function yekun(fdegree) {
+    let celci = faranheyt(fdegree);
+    if(celci<+100){
+        let end = 100-celci;
+        return `${end} derece qalib`
+    }
+    else{
+        return "Hele var"
+    }
+}
+console.log(yekun(200));
 
 
